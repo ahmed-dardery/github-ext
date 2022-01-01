@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub Ext.",
+  "version": "0.0.1",
+  "description": "Add copy button to branches names and link to based PRs on Github",
+  "content_scripts": [
+    {
+      "run_at": "document_end",
+      "matches": [
+        "https://github.com/*"
+      ],
+      "js": [
+        "js/jquery-3.6.0.min.js"
+      ]
+    }
+  ],
+  "host_permissions": [
+    "*://github.com/*"
+  ]
+}
