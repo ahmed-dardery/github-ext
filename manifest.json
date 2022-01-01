@@ -12,7 +12,8 @@
       "js": [
         "js/jquery-3.6.0.min.js",
         "js/preflight.js",
-        "js/copy-base.js"
+        "js/copy-base.js",
+        "js/pr-base.js"
       ]
     }
   ],
