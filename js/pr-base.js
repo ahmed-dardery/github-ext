@@ -1,5 +1,8 @@
 $(document).bind('ext:load', function () {
   $(".commit-ref").each(function () {
+    if($(this).hasClass("pr-base")) return;
+    $(this).addClass("pr-base")
+
     branch_block = $(this).find(":first-child")
 
     branch_name = branch_block.find("span:last").text();
@@ -17,6 +20,6 @@ $(document).bind('ext:load', function () {
     params = $.param({ 'q': `is:pr is:open base:${branch_name}` });
     href = `${repo_url}/pulls?${params}`;
 
-    $(this).after(` (<a href="${href}">PRs</a>)`);
+    $(this).after(` (<a href="${href}">as base</a>)`);
   });
 });
